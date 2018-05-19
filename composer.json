@@ -1,16 +1,28 @@
 {
 	"name": "fuel/email",
-	"description" : "FuelPHP 1.x Email Package",
-	"type": "fuel-package",
+	"description": "Fuel PHP Framework - Version 1 - PSR-4 Email Package",
+	"keywords": ["fuel", "fuelphp", "v1", "email"],
 	"homepage": "https://github.com/fuel/email",
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "FuelPHP Development Team",
+			"name": "Fuel PHP Framework Development Team",
 			"email": "team@fuelphp.com"
 		}
 	],
 	"require": {
-		"composer/installers": "~1.0"
+		"php": ">=5.5",
+		"fuel/core": "dev-develop"
+	},
+	"require-dev": {
+		"codeception/codeception": "~2.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Email\\": "classes/"
+		},
+		"files": [
+			"src/bootstrap.php"
+		]
 	}
 }

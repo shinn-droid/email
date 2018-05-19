@@ -3,7 +3,7 @@
  * Fuel is a fast, lightweight, community driven PHP 5.4+ framework.
  *
  * @package    Fuel
- * @version    1.9-dev
+ * @version    develop
  * @author     Fuel Development Team
  * @license    MIT License
  * @copyright  2010 - 2018 Fuel Development Team
@@ -11,14 +11,6 @@
  */
 
 namespace Email;
-
-class SmtpConnectionException extends \FuelException {}
-
-class SmtpCommandFailureException extends \EmailSendingFailedException {}
-
-class SmtpTimeoutException extends \EmailSendingFailedException {}
-
-class SmtpAuthenticationFailedException extends \FuelException {}
 
 class Email_Driver_Smtp extends \Email_Driver
 {
