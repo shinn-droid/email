@@ -170,6 +170,13 @@ return array(
 			'domain' => 'domain',
 		),
 
+        /**
+         * Sendgrid settings, see https://sendgrid.com/
+         */
+        'sendgrid' => array(
+            'key'    => 'api_key',
+        ),
+
 		/**
 		 * When relative protocol uri's ("//uri") are used in the email body,
 		 * you can specify here what you want them to be replaced with. Options

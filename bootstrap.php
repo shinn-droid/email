@@ -26,6 +26,7 @@
 	'Email\\Email_Driver_Noop'                 => __DIR__.'/classes/email/driver/noop.php',
 	'Email\\Email_Driver_Mailgun'              => __DIR__.'/classes/email/driver/mailgun.php',
 	'Email\\Email_Driver_Mandrill'             => __DIR__.'/classes/email/driver/mandrill.php',
+	'Email\\Email_Driver_Sendgrid'             => __DIR__.'/classes/email/driver/sendgrid.php',
 
 	/**
 	 * Email exceptions.

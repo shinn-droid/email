@@ -148,4 +148,33 @@ return array(
 );
 ```
 
+### Sendgird
+Sendgird is an online service by Rackspace (https://sendgrid.com/) that allows you to send emails by demand. You will need to install the sendgird library (https://github.com/sendgrid/sendgrid-php) with composer in your FuelPHP.
+
+Once you have installed the package you will have to set up the config for your App:
+
+config/email.php
+```php
+<?php
+return array(
+	/**
+	 * Override default Email.php settings
+	 */
+	'defaults' => array(
+		'driver' => 'sendgrid',
+		'sendgrid' => array(
+			'apikey' => 'YOUR KEY',
+		),
+	),
+);
+```
+
+add to composer.json
+
+```json
+"require": {
+  "sendgrid/sendgrid": "~6.0"
+}
+```
+
 # That's it. Questions? 
