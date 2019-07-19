@@ -44,7 +44,7 @@ return array(
 		'useragent' => 'FuelPHP, PHP 5.3 Framework',
 
 		/**
-		 * Mail driver (mail, smtp, sendmail, noop)
+		 * Mail driver (mail, smtp, sendmail, noop, sendgrid)
 		 */
 		'driver' => 'mail',
 
@@ -169,6 +169,13 @@ return array(
 			'key'    => 'api_key',
 			'domain' => 'domain',
 		),
+
+        /**
+         * Sendgrid settings, see https://sendgrid.com/
+         */
+        'sendgrid' => array(
+            'key'    => 'api_key',
+        ),
 
 		/**
 		 * When relative protocol uri's ("//uri") are used in the email body,
