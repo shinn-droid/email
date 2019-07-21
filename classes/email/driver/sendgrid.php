@@ -24,7 +24,7 @@ class Email_Driver_Sendgrid extends \Email_Driver
     protected function _send()
     {
         Log::debug(print_r($this->to_arr, true), '$this->to_arr');
-        $from = new \SendGrid\Email("slimov", "info@slimov.com");
+        $from = new \SendGrid\Email($this->config['from']['name'], $this->config['from']['email']);
         $to = new \SendGrid\Email($this->to_arr[0], $this->to_arr[0]);
         $content = new \SendGrid\Content("text/plain",  $this->body);
 
@@ -39,7 +39,7 @@ class Email_Driver_Sendgrid extends \Email_Driver
             $mail->personalization[0]->addTo($email2);
         }
 
-        $apiKey = \Config::get('define.sendgrid.apikey');
+        $apiKey = $this->config['sendgrid']['key'];
         $sg = new \SendGrid($apiKey);
 
         $response = $sg->client->mail()->send()->post($mail);
