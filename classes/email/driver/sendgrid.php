@@ -24,7 +24,7 @@ class Email_Driver_Sendgrid extends \Email_Driver
     protected function _send()
     {
 
-        $from = new \SendGrid\Email("slimov", "info@slimov.com");
+        $from = new \SendGrid\Email($this->config['from']['name'], $this->config['from']['email']);
         $to = new \SendGrid\Email($this->to_arr[0], $this->to_arr[0]);
         $content = new \SendGrid\Content("text/plain",  $this->body);
 
